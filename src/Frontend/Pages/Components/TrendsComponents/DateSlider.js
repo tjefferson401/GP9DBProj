@@ -23,6 +23,8 @@ export default function DateSlider() {
         getAriaValueText={valuetext}
         min={1900}
         max={2022}
+       
+       
       />
     </Box>
   );

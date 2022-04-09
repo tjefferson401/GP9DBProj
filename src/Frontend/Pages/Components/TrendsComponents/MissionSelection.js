@@ -33,61 +33,61 @@ export default function MissionSelection() {
   return (
     <Box sx={{ display: 'flex' }}>
       <FormControl sx={{ m: 3 }} component="fieldset" variant="standard">
-        <FormLabel component="legend">MISSION</FormLabel>
+        <FormLabel component="legend" style={{ color: 'white' }} >MISSION</FormLabel>
         <FormGroup>
           <FormControlLabel
             control={
-              <Checkbox checked={cassini} onChange={handleChange} name="cassini" />
+              <Checkbox checked={cassini} onChange={handleChange} name="cassini" style={{ color: 'white' }} />
             }
-            label="CASSINI"
+            label="CASSINI" style={{ color: 'white' }}
           />
           <FormControlLabel
             control={
-              <Checkbox checked={contour} onChange={handleChange} name="contour" />
+              <Checkbox checked={contour} onChange={handleChange} name="contour" style={{ color: 'white' }}/>
             }
-            label="CONTOUR"
+            label="CONTOUR" style={{ color: 'white' }}
           />
           <FormControlLabel
             control={
-              <Checkbox checked={dart} onChange={handleChange} name="dart" />
+              <Checkbox checked={dart} onChange={handleChange} name="dart" style={{ color: 'white' }}/>
             }
-            label="DART"
+            label="DART" style={{ color: 'white' }}
           />
            <FormControlLabel
             control={
-              <Checkbox checked={dawn} onChange={handleChange} name="dawn" />
+              <Checkbox checked={dawn} onChange={handleChange} name="dawn" style={{ color: 'white' }}/>
             }
-            label="DAWN"
+            label="DAWN" style={{ color: 'white' }}
           />
            <FormControlLabel
             control={
-              <Checkbox checked={deepimpact} onChange={handleChange} name="deepimpact" />
+              <Checkbox checked={deepimpact} onChange={handleChange} name="deepimpact" style={{ color: 'white' }}/>
             }
-            label="DEEP IMPACT"
+            label="DEEP IMPACT" style={{ color: 'white' }}
           />
            <FormControlLabel
             control={
-              <Checkbox checked={deepspace} onChange={handleChange} name="deepspace" />
+              <Checkbox checked={deepspace} onChange={handleChange} name="deepspace" style={{ color: 'white' }}/>
             }
-            label="DEEP SPACE"
+            label="DEEP SPACE" style={{ color: 'white' }}
           />
            <FormControlLabel
             control={
-              <Checkbox checked={europa} onChange={handleChange} name="europa" />
+              <Checkbox checked={europa} onChange={handleChange} name="europa" style={{ color: 'white' }}/>
             }
-            label="EUROPA"
+            label="EUROPA" style={{ color: 'white' }}
           />
            <FormControlLabel
             control={
-              <Checkbox checked={galileo} onChange={handleChange} name="galileo" />
+              <Checkbox checked={galileo} onChange={handleChange} name="galileo" style={{ color: 'white' }}/>
             }
-            label="GALILEO"
+            label="GALILEO" style={{ color: 'white' }}
           />
             <FormControlLabel
             control={
-              <Checkbox checked={genesis} onChange={handleChange} name="genesis" />
+              <Checkbox checked={genesis} onChange={handleChange} name="genesis" style={{ color: 'white' }}/>
             }
-            label="GENESIS"
+            label="GENESIS" style={{ color: 'white' }}
           />
 
         </FormGroup>

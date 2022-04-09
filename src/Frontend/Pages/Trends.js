@@ -119,14 +119,18 @@ function Trends() {
       <TabContext value={value}>
         <Box sx={{ borderBottom: 1, borderColor: 'divider' }}>
           <TabList onChange={handleChange} aria-label="lab API tabs example">
-            <Tab label="Item One" style={{ color: 'white' }} value="1" />
-            <Tab label="Item Two" style={{ color: 'white' }} value="2" />
-            <Tab label="Item Three" style={{ color: 'white' }} value="3" />
+            <Tab label="BUDGET AND MISSION ACTIVITY" style={{ color: 'white' }} value="1" />
+            <Tab label="TARGETS" style={{ color: 'white' }} value="2" />
+            <Tab label="WAVELENGTH AND RESOLUTION" style={{ color: 'white' }} value="3" />
+            <Tab label="DIVERSITY OF OBSERVATION" style={{ color: 'white' }} value="4" />
+            <Tab label="MISSION BUDGET AND DATA CORRELATION" style={{ color: 'white' }} value="5" />
           </TabList>
         </Box>
-        <TabPanel value="1">Item One</TabPanel>
-        <TabPanel value="2">Item Two</TabPanel>
-        <TabPanel value="3">Item Three</TabPanel>
+        <TabPanel value="1"> <PlanetSelection /> <Button>APPLY</Button> </TabPanel>
+        <TabPanel value="2"> <DateSlider/> <Button>APPLY</Button> </TabPanel>
+        <TabPanel value="3"> <PlanetSelection /> <Button>APPLY</Button> </TabPanel>
+        <TabPanel value="4"> <PlanetSelection/> <Button>APPLY</Button> </TabPanel>
+        <TabPanel value="5"> <MissionSelection/> <Button>APPLY</Button> </TabPanel>
       </TabContext>
     </Box>
 

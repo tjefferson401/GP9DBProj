@@ -33,61 +33,61 @@ export default function PlanetSelection() {
   return (
     <Box sx={{ display: 'flex' }}>
       <FormControl sx={{ m: 3 }} component="fieldset" variant="standard">
-        <FormLabel component="legend">CELESTIAL BODY</FormLabel>
+        <FormLabel component="legend" style={{ color: 'white' }} >CELESTIAL BODY</FormLabel>
         <FormGroup>
           <FormControlLabel
             control={
-              <Checkbox checked={saturn} onChange={handleChange} name="saturn" />
+              <Checkbox checked={saturn} onChange={handleChange} name="saturn" style={{ color: 'white' }}/>
             }
-            label="SATURN"
+            label="SATURN" style={{ color: 'white' }}
           />
           <FormControlLabel
             control={
-              <Checkbox checked={neptune} onChange={handleChange} name="neptune" />
+              <Checkbox checked={neptune} onChange={handleChange} name="neptune" style={{ color: 'white' }} />
             }
-            label="NEPTUNE"
+            label="NEPTUNE" style={{ color: 'white' }}
           />
           <FormControlLabel
             control={
-              <Checkbox checked={uranus} onChange={handleChange} name="uranus" />
+              <Checkbox checked={uranus} onChange={handleChange} name="uranus" style={{ color: 'white' }}/>
             }
-            label="URANUS"
+            label="URANUS" style={{ color: 'white' }}
           />
            <FormControlLabel
             control={
-              <Checkbox checked={earth} onChange={handleChange} name="earth" />
+              <Checkbox checked={earth} onChange={handleChange} name="earth" style={{ color: 'white' }}/>
             }
-            label="EARTH"
+            label="EARTH" style={{ color: 'white' }}
           />
            <FormControlLabel
             control={
-              <Checkbox checked={venus} onChange={handleChange} name="venus" />
+              <Checkbox checked={venus} onChange={handleChange} name="venus" style={{ color: 'white' }} />
             }
-            label="VENUS"
+            label="VENUS" style={{ color: 'white' }}
           />
            <FormControlLabel
             control={
-              <Checkbox checked={jupiter} onChange={handleChange} name="jupiter" />
+              <Checkbox checked={jupiter} onChange={handleChange} name="jupiter" style={{ color: 'white' }}/>
             }
-            label="JUPITER"
+            label="JUPITER" style={{ color: 'white' }}
           />
            <FormControlLabel
             control={
-              <Checkbox checked={mars} onChange={handleChange} name="mars" />
+              <Checkbox checked={mars} onChange={handleChange} name="mars" style={{ color: 'white' }}/>
             }
-            label="MARS"
+            label="MARS" style={{ color: 'white' }}
           />
            <FormControlLabel
             control={
-              <Checkbox checked={mercury} onChange={handleChange} name="mercury" />
+              <Checkbox checked={mercury} onChange={handleChange} name="mercury" style={{ color: 'white' }}/>
             }
-            label="MERCURY"
+            label="MERCURY" style={{ color: 'white' }}
           />
             <FormControlLabel
             control={
-              <Checkbox checked={moon} onChange={handleChange} name="moon" />
+              <Checkbox checked={moon} onChange={handleChange} name="moon" style={{ color: 'white' }}/>
             }
-            label="MOON"
+            label="MOON" style={{ color: 'white' }}
           />
 
         </FormGroup>
