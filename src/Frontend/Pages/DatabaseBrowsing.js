@@ -82,10 +82,6 @@ const data = {
 
 
 
-    // const image_list = data['rows'].map( (o) => {
-    //   return <img src = {o.IMAGE_URL}/>
-    //  }
-
     const style = {
       position: 'absolute',
       top: '50%',
@@ -127,7 +123,7 @@ function DatabaseBrowsing() {
 
   
 const modalData = Object.keys(modalProps).map((m) => {
-  return <p>{m}: {modalProps[m]}</p>
+  return <p> {m}: {modalProps[m]} </p>
 })
 
   const imgs = data['rows'].map( (o) => {
@@ -147,9 +143,6 @@ const modalData = Object.keys(modalProps).map((m) => {
    
     <div className="DatabaseBrowsing">
     
-
-
-
       <Grid>
           <Menu/>
           <div className='browser-container'>
@@ -157,12 +150,11 @@ const modalData = Object.keys(modalProps).map((m) => {
         <div className='image-holder'>
 
 
-
           {imgs} 
 
         </div>
         </div>
-        <DateSlider/>
+       
 
         
       </Grid>
