@@ -8,7 +8,6 @@ import Overview from './Frontend/Pages/Overview';
 import Trends from './Frontend/Pages/Trends';
 import DatabaseBrowsing from './Frontend/Pages/DatabaseBrowsing';
 
-import './Frontend/Pages/Components/space.jpg';
 import { render } from '@testing-library/react';
 
 

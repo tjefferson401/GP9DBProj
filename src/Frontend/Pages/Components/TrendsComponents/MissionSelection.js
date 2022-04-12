@@ -6,6 +6,7 @@ import FormGroup from '@mui/material/FormGroup';
 import FormControlLabel from '@mui/material/FormControlLabel';
 import FormHelperText from '@mui/material/FormHelperText';
 import Checkbox from '@mui/material/Checkbox';
+import { Button } from '@material-ui/core';
 
 export default function MissionSelection() {
   const [state, setState] = React.useState({
@@ -31,7 +32,9 @@ export default function MissionSelection() {
 
 
   return (
-    <Box sx={{ display: 'flex' }}>
+    <Box sx={{ display:"flex" , 
+    width:225 ,height:500,  borderRadius: 10 ,  color: 'white', marginLeft:'50px',
+    border:1}}>
       <FormControl sx={{ m: 3 }} component="fieldset" variant="standard">
         <FormLabel component="legend" style={{ color: 'white' }} >MISSION</FormLabel>
         <FormGroup>
@@ -92,6 +95,7 @@ export default function MissionSelection() {
 
         </FormGroup>
         {/* <FormHelperText>Be careful</FormHelperText> */}
+        <Button style={{ color: 'white' }} >APPLY</Button>
       </FormControl>
       
     </Box>

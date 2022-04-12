@@ -15,12 +15,35 @@
   color: white;
 }
 
-.App-link {
-  color: #352e44;
+.browser-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  
+}
+
+.image-div {
+  padding: 20px;
+}
+
+.browser-image {
+  padding: 10px;
+  width: 100px;
+ 
+}
+
+.image-holder {
+  padding: 50px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  height: 50%;
+  width: 50%;
 }
 
 
 .Home{
+  display: flex;
   background-image: 
   url(
 "https://images.unsplash.com/photo-1419242902214-272b3f66ee7a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=913&q=80");
@@ -28,7 +51,6 @@
   background-size: 100%;
   min-height: 100vh;
   height: 100vh;
-  margin-top: -24px;
   background-repeat:no-repeat; 
  
 }
@@ -51,6 +73,7 @@
 
 
 .Overview{
+  display: flex;
   background-image: 
   url(
 "https://images.unsplash.com/photo-1419242902214-272b3f66ee7a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=913&q=80");
@@ -58,12 +81,12 @@
   background-size: 100%;
   min-height: 100vh;
   height: 100vh;
-  margin-top: -24px;
   background-repeat:no-repeat; 
  
 }
 
 .DatabaseBrowsing{
+  display: flex;
   background-image: 
   url(
 "https://images.unsplash.com/photo-1419242902214-272b3f66ee7a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=913&q=80");
@@ -71,17 +94,65 @@
   background-size: 100%;
   min-height: 100vh;
   height: 100vh;
-  margin-top: -24px;
   background-repeat:no-repeat; 
  
 
 }
 
+
+.Trends{
+
+  display: flex;
+  flex-direction: 'row';
+  align-items: 'center';
+  justify-content: 'center';
+
+}
+
 .TrendButtons{
 
-   display: 'flex';
-    align-items: 'center';
-    justify-content: 'center';
+  display: 'flex';
+  align-items: 'center';
+  justify-content: 'center';
 
+
+}
+
+
+/* putting the graph in a row with selector */
+
+.TrendA{
+
+  display:flex; 
+  flex-direction:row;
+
+}
+
+.TrendB{
+  
+  display:flex; 
+  flex-direction:row;
+
+}
+.TrendC{
+
+  display:flex; 
+  flex-direction:row;
+
+}
+.TrendD{
+
+  display:flex; 
+  flex-direction:row;
+
+}
+
+.DateSlider{
+  display:flex; 
+  margin-top: auto;
+  justify-self: center;
+  justify-content: center;
+
+  
 
 }

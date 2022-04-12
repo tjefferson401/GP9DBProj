@@ -1,7 +1,7 @@
 import * as React from 'react';
 import Box from '@mui/material/Box';
 import Slider from '@mui/material/Slider';
-
+import { Button } from '@material-ui/core';
 function valuetext(value) {
   return `${value}`;
 }
@@ -14,7 +14,8 @@ export default function DateSlider() {
   };
 
   return (
-    <Box sx={{ width: 900 }}>
+      <div> 
+    <Box sx={{ width: 900 }} className = "DateSlider">
       <Slider
         getAriaLabel={() => 'DATE RANGE'}
         value={value}
@@ -24,8 +25,14 @@ export default function DateSlider() {
         min={1900}
         max={2022}
        
-       
+
       />
+      
     </Box>
+
+
+
+    </div>
+      
   );
 }

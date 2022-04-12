@@ -37,57 +37,9 @@ import {
   NavBtnLink,
 } from './TrendPages/TrendsNavBarElements.js';
 
-function rand() {
-    return Math.round(Math.random() * 20) - 10;
-}
-
-function getModalStyle() {
-    const top = 50 + rand();
-    const left = 50 + rand();
-    return {
-        top: `${top}%`,
-        left: `${left}%`,
-        transform: `translate(-${top}%, -${left}%)`,
-    };
-
-  
-}
-
-const useStyles = makeStyles(theme => ({
-    modal: {
-        display: 'flex',
-        alignItems: 'center',
-        justifyContent: 'center',
-    },
-    paper: {
-        position: 'absolute',
-        width: 1000,
-        height: 750,
-        // backgroundColor: theme.palette.background.paper,
-        backgroundColor: 'rgba(255, 255, 255, 0.65)',
-        borderRadius: '20px',
-        boxShadow: theme.shadows[5],
-        padding: theme.spacing(2, 4, 3),
-    },
-}));
-
-
+import TrendsGraph from "./Components/TrendsComponents/TrendsGraph";
 
 function Trends() {
-
-    // const [graphedData, setGraphedData] = useState({}); 
-    // const [selectedFruit, setSelectedFruit] = useState([]);
-
-
-    // const handleSelectChange = (event) => {
-    //   setSelectedFruit(event.target.value);
-    // };
-
-    // const onApplyFilters = () =>  {
-    //   setGraphedData(onApplyFilters(selectedFruit))
-    // };
-
-   // const[state, setState] = React.useState([]);
 
 
    const [value, setValue] = React.useState('1');
@@ -95,10 +47,7 @@ function Trends() {
    const handleChange = (event, newValue) => {
      setValue(newValue);
    };
-    
 
-    const classes = useStyles();
-    const [modalStyle] = React.useState(getModalStyle);
     const [open, setOpen] = React.useState(false);
     const handleOpen = () => {
         setOpen(true);
@@ -111,70 +60,64 @@ function Trends() {
       
 
         <div className = "Trends">
-
-        <div className = "TrendButtons" >
+            <div className = "TrendButtons" >
 
 
         <Box sx={{ width: '100%', typography: 'body1' }}>
       <TabContext value={value}>
         <Box sx={{ borderBottom: 1, borderColor: 'divider' }}>
           <TabList onChange={handleChange} aria-label="lab API tabs example">
-            <Tab label="BUDGET AND MISSION ACTIVITY" style={{ color: 'white' }} value="1" />
-            <Tab label="TARGETS" style={{ color: 'white' }} value="2" />
-            <Tab label="WAVELENGTH AND RESOLUTION" style={{ color: 'white' }} value="3" />
-            <Tab label="DIVERSITY OF OBSERVATION" style={{ color: 'white' }} value="4" />
-            <Tab label="MISSION BUDGET AND DATA CORRELATION" style={{ color: 'white' }} value="5" />
+            <Tab label=" BUDGET AND MISSION ACTIVITY " style={{ marginLeft:'150px', marginRight:'10px', color: 'white', m:'auto' }} value="1"  />
+            <Tab label=" TARGETS " style={{ marginRight:'10px', color: 'white', m:'auto' }} value="2" />
+            <Tab label=" WAVELENGTH AND RESOLUTION " style={{ marginRight:'10px', color: 'white' }} value="3" />
+            <Tab label=" DIVERSITY OF OBSERVATION " style={{ marginRight:'10px', color: 'white' }} value="4" />
+            <Tab label=" MISSION BUDGET AND DATA CORRELATION " style={{ marginRight:'10px', color: 'white' }} value="5" />
           </TabList>
         </Box>
-        <TabPanel value="1"> <PlanetSelection /> <Button>APPLY</Button> </TabPanel>
-        <TabPanel value="2"> <DateSlider/> <Button>APPLY</Button> </TabPanel>
-        <TabPanel value="3"> <PlanetSelection /> <Button>APPLY</Button> </TabPanel>
-        <TabPanel value="4"> <PlanetSelection/> <Button>APPLY</Button> </TabPanel>
-        <TabPanel value="5"> <MissionSelection/> <Button>APPLY</Button> </TabPanel>
+
+        <TabPanel value="1" className="TrendA"> 
+
+            <PlanetSelection /> 
+            <TrendsGraph/>
+        
+        </TabPanel>
+
+
+        <TabPanel value="2">        
+            <TrendsGraph/>  
+
+            <DateSlider/> 
+
+            <Button style = {{color:'white'}}> APPLY </Button>
+
+        </TabPanel>
+
+        <TabPanel value="3" className="TrendB"> 
+            <PlanetSelection /> 
+            <TrendsGraph/> 
+
+        </TabPanel>
+
+        <TabPanel value="4" className="TrendA"> 
+            <PlanetSelection/> 
+            <TrendsGraph/>
+
+        </TabPanel>
+
+        <TabPanel value="5" className="TrendA"> 
+            <MissionSelection/>  
+            <TrendsGraph/>
+
+        </TabPanel>
+
       </TabContext>
     </Box>
 
 
-        {/* <Grid container justifyContent="center"> */}
-        {/* <Grid>
-        <Button variant="contained" color="grey" onClick={handleOpen}>
-            Trend 1
-        </Button>
-        <Button variant="contained" color="grey" onClick={handleOpen}>
-            Trend 2
-        </Button>
-        <Button variant="contained" color="grey" onClick={handleOpen}>
-            Trend 3
-        </Button>
-        <Button variant="contained" color="grey" onClick={handleOpen}>
-            Trend 4
-        </Button>
-        <Button variant="contained" color="grey" onClick={handleOpen}>
-            Trend 5
-        </Button>
-
-        
-
-        </Grid> */}
+       
         </div>
 
-        <Modal
-            aria-labelledby="simple-modal-title"
-            aria-describedby="simple-modal-description"
-            open={open}
-            onClose={handleClose}
-        >
-            <div style={modalStyle} className={classes.paper}>
-                <h2>Trend 1</h2> 
-                <PlanetSelection/> 
-          
-                <DateSlider/>
-
-               
-            </div>
-            
-        </Modal>
-
+   
 
 
         
@@ -186,12 +129,3 @@ function Trends() {
   
   export default Trends;
 
-//   <TrendsNavbar />
-//   <Routes>
-//     {/* <Route path="/" exact element={<Trends />} />
-//     <Route path="/Trend1" element={<Trend1 />} />
-//     <Route path="/Trend2" element={<Trend2 />} />
-//     <Route path="/Trend3" element={<Trend3 />} />
-//     <Route path="/Trend4" element={<Trend4 />} />
-//     <Route path="/Trend5" element={<Trend5 />} /> */}
-//   </Routes>
