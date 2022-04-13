@@ -33,7 +33,7 @@ export default function PlanetSelection() {
 
   return (
     <Box sx={{ display:"flex" , 
-    width:200 ,height:500,  borderRadius: 10 ,  color: 'white', marginLeft:'50px',
+    width:200 ,height:500,  borderRadius: 10 ,  color: 'white',
     border:1}}>
       <FormControl sx={{ m: 3 }} component="fieldset" variant="standard">
         <FormLabel component="legend" style={{ color: 'white' }} >CELESTIAL BODY</FormLabel>
